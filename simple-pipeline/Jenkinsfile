@@ -43,14 +43,16 @@ pipeline {
             }
         }
 
-        stage('build') {
+        stage('checkout') {
             steps {
             git url: 'https://github.com/guhilling/kotlin-coroutines-demo'
             }
-            steps {
-            sh "mvn clean install"
-            }
         }
 
+        stage('build') {
+            steps {
+            sh "ls -l"
+            }
+        }
     }
 }
