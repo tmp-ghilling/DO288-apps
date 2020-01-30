@@ -41,7 +41,7 @@ pipeline {
             steps {
             git url: 'https://github.com/guhilling/kotlin-coroutines-demo'
 
-            withMaven(maven: maven-3) {
+            withMaven {
                  sh "mvn clean install"
             }
             }
