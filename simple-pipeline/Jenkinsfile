@@ -11,7 +11,7 @@ pipeline {
 
     stages {
 
-        stage('stage 1') {
+        stage('Anfang') {
             steps {
                 script {
                     openshift.withCluster() {
