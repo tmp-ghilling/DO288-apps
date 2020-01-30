@@ -37,9 +37,10 @@ pipeline {
             }
         }
 
-        stage('stage 3') {
-            steps {
-                sh 'echo hello from stage 3!. This is the last stage...'
+        stage('build') {
+            git url: https://github.com/guhilling/kotlin-coroutines-demo
+            withMaven(maven: maven-3) {
+                 sh "mvn clean install"
             }
         }
 
